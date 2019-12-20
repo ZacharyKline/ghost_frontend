@@ -9,18 +9,6 @@ import { NavLink, Route } from 'react-router-dom'
 import MessageList from './Components/MessageList'
 const boastURL = 'http://localhost:8000/boast/'
 
-// let _csrfToken = null;
-
-// async function getCsrfToken() {
-//   if (_csrfToken === null) {
-//     const response = await fetch(`${boastURL}/csrf/`, {
-//       credentials: 'include',
-//     });
-//     const data = await response.json();
-//     _csrfToken = data.csrfToken;
-//   }
-//   return _csrfToken;
-// }
 class App extends Component {
   state = {
     posts: [],
@@ -86,7 +74,9 @@ class App extends Component {
     return (
       < React.Fragment >
         <div>
-          <Layout className="layout">
+          <Layout className="layout"
+            id='backbackground'
+          >
             <Header>
               <div className="logo" />
               <Menu
@@ -97,46 +87,55 @@ class App extends Component {
               >
                 <Switch>
                   <ul className='menu'>
-                    <li><NavLink exact to="/">Home</NavLink></li>
-                    <li><NavLink to="/boasts">Boasts</NavLink></li>
-                    <li><NavLink to="/roasts">Roasts</NavLink></li>
-                    <li><NavLink to="/updooted">Most Upvoted</NavLink></li>
-                    <li><NavLink to="/downdooted">Most Downvoted</NavLink></li>
+                    <li className='menu1'><NavLink exact to="/">Home</NavLink></li>
+                    <li className='menu2'><NavLink to="/boasts">Boasts</NavLink></li>
+                    <li className='menu3'><NavLink to="/roasts">Roasts</NavLink></li>
+                    <li className='menu4'><NavLink to="/updooted">Most Upvoted</NavLink></li>
+                    <li className='menu5'><NavLink to="/downdooted">Most Downvoted</NavLink></li>
                   </ul>
                 </Switch>
               </Menu>
             </Header>
             <Content style={{ padding: '0 50px' }}>
-              <h1>Make a Boast/Roast</h1>
-              <Form>
-                <Form.Item>
-                  <Input
-                    id='toggle'
-                    placeholder="Boast or Bitch"
-                    autoFocus
-                    onChange={this.handleChange}
-                    onKeyPress={event => {
-                      if (event.key === 'Enter') {
-                        this.handleCreate(event)
-                      }
-                    }}
-                    value={this.state.message}
-                  />
-                </Form.Item>
-                <Form.Item>
-                  <Radio.Group defaultValue="roast" onChange={this.handleChange}>
-                    <Radio.Button value="boast" className='voast'>Boast</Radio.Button>
-                    <Radio.Button value="roast" >Roast</Radio.Button>
-                  </Radio.Group>
-                </Form.Item>
-                <Form.Item>
-                  <Button type="primary" onClick={this.handleCreate}>Submit</Button>
-                </Form.Item>
-              </Form>
+              <br />
+              <div className='foamy'>
+                <h1 className='titles'>Make a Boast/Roast</h1>
+                <Form>
+                  <Form.Item>
+                    <Input
+                      id='toggle'
+                      placeholder="Boast or Bitch"
+                      autoFocus
+                      onChange={this.handleChange}
+                      onKeyPress={event => {
+                        if (event.key === 'Enter') {
+                          this.handleCreate(event)
+                        }
+                      }}
+                      value={this.state.message}
+                    />
+                  </Form.Item>
+                  <Form.Item>
+                    <Radio.Group defaultValue="roast" onChange={this.handleChange}>
+                      <Radio.Button value="boast" className='voast'>Boast</Radio.Button>
+                      <Radio.Button value="roast" >Roast</Radio.Button>
+                    </Radio.Group>
+                  </Form.Item>
+                  <Form.Item>
+                    <Button type="primary" onClick={this.handleCreate}>Submit</Button>
+                  </Form.Item>
+                </Form>
+              </div>
               <br />
               <br />
 
-              <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
+              <div style={{
+                background: '#fff',
+                padding: 24,
+                minHeight: 280,
+              }}
+                className='backyWacky'
+              >
                 <Route exact path="/" render={() => (
                   <MessageList posts={this.state.posts} />
                 )}>
@@ -176,7 +175,7 @@ class App extends Component {
               </div>
 
             </Content>
-            <Footer style={{ textAlign: 'center' }}>Created by Zachary Kline</Footer>
+            <Footer className='footy' style={{ fontSize: '25px' }}>Created by Zachary Kline</Footer>
           </Layout>,
         </div>
       </React.Fragment >

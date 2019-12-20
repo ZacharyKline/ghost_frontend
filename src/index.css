@@ -4,7 +4,7 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;  
 }
 
 code {
@@ -22,4 +22,152 @@ code {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  font-size: 22px;
+  font-weight: bolder;
 }
+
+.menu1:active {
+  font-size: 20px;
+  height: 63px;
+  width: 61px;
+}
+
+.menu2:active, .menu3:active {
+  font-size: 20px;
+  height: 63px;
+  width: 71px;
+}
+
+.menu4:active {
+  font-size: 20px;
+  height: 63px;
+  width: 143.9px;
+}
+.menu5:active{
+  font-size: 20px;
+  height: 63px;
+  width: 174px;
+}
+
+.footy {
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px rgb(66, 66, 66);
+  -webkit-animation: color-change-3x 12s linear infinite alternate both;
+  animation: color-change-3x 12s linear infinite alternate both;
+}
+
+.titles{
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.foamy {
+  background: rgba(132, 138, 140, 0.482);
+  padding: 10px;
+}
+
+/* .cardyB{
+  -webkit-animation: image2-change-3x 12s linear infinite alternate both !important;
+  animation: image2-change-3x 12s linear infinite alternate both !important;}
+
+.backyWacky {
+  -webkit-animation: image-change-3x 9s linear infinite alternate both !important;
+  animation: image-change-3x 9s linear infinite alternate both !important;
+}
+#backbackround {
+  -webkit-animation: image3-change-3x 5s linear infinite alternate both !important;
+  animation: image3-change-3x 5s linear infinite alternate both !important;
+} */
+/* 
+@-webkit-keyframes color-change-3x {
+  0% {
+    color: #19dcea;
+  }
+  50% {
+    color: #b22cff;
+  }
+  100% {
+    color: #ea2222;
+  }
+}
+@keyframes color-change-3x {
+  0% {
+    color: #19dcea;
+  }
+  50% {
+    color: #b22cff;
+  }
+  100% {
+    color: #ea2222;
+  }
+}
+
+@-webkit-keyframes image-change-3x {
+  0% {
+    background-image: url('https://66.media.tumblr.com/457069184da994e6ab6e139972c3c4b3/tumblr_noa5vabsbk1smqdb1o1_400.gif');
+  }
+  50% {
+    background-image: url('https://media1.giphy.com/media/u8X1CgXUIAePe/source.gif')
+  }
+  100% {
+    background-image: url('https://media.giphy.com/media/3ohc19KXfXCZSezhTy/giphy.gif')
+  }
+}
+@keyframes image-change-3x {
+  0% {
+    background-image: url('https://media.giphy.com/media/tTyTbFF9uEbPW/giphy.gif');
+  }
+  50% {
+    background-image: url('https://media1.giphy.com/media/u8X1CgXUIAePe/source.gif')
+  }
+  100% {
+    background-image: url('https://media.giphy.com/media/3ohc19KXfXCZSezhTy/giphy.gif')
+  }
+}
+
+@-webkit-keyframes image2-change-3x {
+  0% {
+    background-image: url('https://media.giphy.com/media/eZrb80yRTID1S/giphy.gif');
+  }
+  50% {
+    background-image: url('https://media0.giphy.com/media/DwxFPVK1U1ABy/source.gif')
+  }
+  100% {
+    background-image: url('https://media.giphy.com/media/bAmpRgACntwA0/giphy.gif')
+  }
+}
+@keyframes image2-change-3x {
+  0% {
+    background-image: url('https://media.giphy.com/media/eZrb80yRTID1S/giphy.gif');
+  }
+  50% {
+    background-image: url('https://media0.giphy.com/media/DwxFPVK1U1ABy/source.gif')
+  }
+  100% {
+    background-image: url('https://media.giphy.com/media/bAmpRgACntwA0/giphy.gif')
+  }
+}
+
+@-webkit-keyframes image3-change-3x {
+  0% {
+    background-image: url('https://media0.giphy.com/media/L7U978GjI2f3W/source.gif');
+  }
+  50% {
+    background-image: url('https://media.giphy.com/media/PkFUiaI58nuTe/giphy.gif')
+  }
+  100% {
+    background-image: url('https://media.giphy.com/media/eFifJQ2SUYxO0/giphy.gif')
+  }
+}
+@keyframes image3-change-3x {
+  0% {
+    background-image: url('https://media0.giphy.com/media/L7U978GjI2f3W/source.gif');
+  }
+  50% {
+    background-image: url('https://media.giphy.com/media/PkFUiaI58nuTe/giphy.gif')
+  }
+  100% {
+    background-image: url('https://media.giphy.com/media/eFifJQ2SUYxO0/giphy.gif')
+  }
+} */

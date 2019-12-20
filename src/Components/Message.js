@@ -12,16 +12,7 @@ class Message extends Component {
         like: false,
         unlike: false,
         id: 0,
-        posts: this.props.posts
     }
-
-    // componentDidMount() {
-    //     fetch(boastURL)
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             this.setState({ posts: data })
-    //         })
-    // }
 
     handleLike = event => {
         let payload = this.props.id
@@ -53,8 +44,16 @@ class Message extends Component {
     render() {
         return (
             <React.Fragment>
-                <div style={{ background: '#32C5C3', padding: '20px' }}>
-                    <Card bordered={false} style={{ width: 300, background: '#ECECEC', margin: '5px' }}>
+                <div style={{ padding: '20px' }}>
+                    <Card
+                        bordered={false}
+                        style={{
+                            width: 300,
+                            background: '#ECECEC',
+                            margin: '5px',
+                        }}
+                        className='cardyB'
+                    >
                         <div>
                             <h3>{this.props.message}</h3>
                             <div className='updoots'>
